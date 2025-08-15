@@ -1,2 +1,2 @@
 # Board Theory
-Some cool programs for interacting with boards. More to come soon.
+Some cool programs for interacting with boards. More to come soon I promise.
