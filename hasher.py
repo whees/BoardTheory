@@ -31,15 +31,15 @@ class Hasher:
             self.minhashes.append(minhash)
 
     def get_sentence(self, climb):
-    sentence = []
-    
-    for hold_a, role_a in climb.holds.items():
-        for hold_b, role_b in climb.holds.items():
-            if hold_a > hold_b:
-                word = ((hold_a, role_a), (hold_b, role_b))
-                sentence.append(word)
-                
-    return set(sentence)
+        sentence = []
+        
+        for hold_a, role_a in climb.holds.items():
+            for hold_b, role_b in climb.holds.items():
+                if hold_a > hold_b:
+                    word = ((hold_a, role_a), (hold_b, role_b))
+                    sentence.append(word)
+                    
+        return set(sentence)
                     
     def get_signature(self, climb):
         sentence = self.get_sentence(climb)
