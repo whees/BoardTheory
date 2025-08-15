@@ -1,2 +1,1 @@
-# BoardTheory
 # Board Theory
