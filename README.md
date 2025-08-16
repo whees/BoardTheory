@@ -2,6 +2,7 @@
 Some cool programs for interacting with boards. 
  
 Upon execution, main.py will make a hashmap of around 2000 tension problems. The problems are not up to date, so some of your favorites might be missing. The script will then open a window where you can set a problem. Use your keyboard to change roles  
+  
 p: feet  
 s: start  
 m: middle  
