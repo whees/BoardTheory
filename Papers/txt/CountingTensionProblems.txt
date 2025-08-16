@@ -66,7 +66,7 @@ There are $3 ^ {494}$ various ways to set the rest of the problem, giving us a t
 Now that we have our totals for each category, we add them together to get our final total
 
 \[(498 * 497 * 3 ^ {496}) + (498 * 497 * 496 * 3 ^ {495}) + (498 * 497 * 496 * 3 ^ {495}) + (498 * 497 * 496 * 495 * 3 ^ {494})\]
-\[= 498 * 497  * (3 ^ {2} + 2 * 496 * 3 + 496 * 495) * 3 ^ {494}\]
+\[= 498 * 497  * (3 ^ {2} + 2 * 496 * 3 ^ {1} + 496 * 495 * 3 ^ {0}) * 3 ^ {494}\]
 \[= 498 * 497 * 248505 * 3 ^ {394}\]
 \[\approx 3 * 10 ^ {246}\]
 
