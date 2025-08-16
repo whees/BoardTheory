@@ -1,0 +1,75 @@
+\documentclass{article}
+
+% Language setting
+\usepackage[english]{babel}
+
+% Set page size and margins
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+\title{Counting Tension Problems}
+\author{Wees}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+In this article, we will calculate the number of possible Tension Board 2 (TB2) problems.
+\end{abstract}
+
+\section{Introduction}
+
+The TB2 is a climbing board that consists of 498 holds. Each hold can take one of five possible values: None, Foot, Start, Middle, or Finish. A problem must contain at least one start hold and one finish hold, but no more than two start holds or two finish holds. 
+
+\section{Calculation}
+
+There are four possible problem formats: one start with one finish, one start with two finishes, two starts with one finish, and two starts with two finishes. We will count how many problems fall into each category, then add these numbers together to get our final total. 
+
+\subsection{One start with one finish}
+
+First, we count the ways to set a single start and finish hold. There are 498 choices for the start hold. Once the start is chosen, there are 497 choices for a finish hold. So, the number of possible start and finish combinations is given by
+
+\[498 * 497 = 247506\]
+
+Now, the rest of the problem consists of 496 holds that can take one of 3 possible values: None, Foot, or Middle. Therefore, there are $3^{496}$ unique ways to generate the rest of the problem. 
+
+Since each start and finish combination has $3^{496}$ different ways in which it can be set, the total number of climbs that fall into this category is given by
+
+\[498 * 497 * 3 ^ {496}\]
+
+\subsection{One start with two finishes}
+
+Like before, we count the number of combinations of start and finish holds; except, now, we pick a second finish from 496 choices. Hence, the total number of start and finish combinations is given by
+
+\[498 * 497 * 496 = 122762976\]
+
+Again, we count how many ways we can set the rest of the problem. Only, now, we have 495 holds to take on the three remaining values. So, there are $3^{495}$ ways to generate the rest of the problem and the total number of problems in this category is
+
+\[498 * 497 * 496 * 3 ^ {495}\]
+
+\subsection{Two starts with one finish}
+
+This case is identical to the previous one, from a counting standpoint, so we know immediately the number of problems is given by
+
+\[498 * 497 * 496 * 3 ^ {495}\]
+
+\subsection{Two starts with two finishes}
+
+By now, the algorithm should be pretty clear so we will speed through the rest of the calculation.
+The number of ways to set the start and finish is given by
+\[498 * 497 * 496 * 495 = 60767673120\]
+
+There are $3 ^ {494}$ various ways to set the rest of the problem, giving us a total of
+
+\[498 * 497 * 496 * 495 * 3 ^ {494}\]
+
+\section{Conclusion}
+Now that we have our totals for each category, we add them together to get our final total
+
+\[(498 * 497 * 3 ^ {496}) + (498 * 497 * 496 * 3 ^ {495}) + (498 * 497 * 496 * 3 ^ {495}) + (498 * 497 * 496 * 495 * 3 ^ {494})\]
+\[= 498 * 497  * (3 ^ {2} + 2 * 496 * 3 + 496 * 495) * 3 ^ {494}\]
+\[= 498 * 497 * 248505 * 3 ^ {394}\]
+\[\approx 3 * 10 ^ {246}\]
+
+This is an insanely Huge number. Our brains were not built to fathom such numbers. There are only around $10^{80}$ atoms in the known universe, to put this number in perspective. Admittedly, most of these problems are nonsense. Nevertheless, we need more people setting for the Tension Board 2.
+
+\end{document}
